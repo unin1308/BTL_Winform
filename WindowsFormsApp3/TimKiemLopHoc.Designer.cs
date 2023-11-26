@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp3
+namespace WindowsFormsApp3
 {
     partial class TimKiemLopHoc
     {
@@ -38,6 +38,8 @@
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.txtSiSo1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,15 +84,16 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(455, 31);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 16);
+            this.label3.Size = new System.Drawing.Size(55, 16);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Sĩ số (≤)";
+            this.label3.Text = "Sĩ số từ:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtSiSo
             // 
-            this.txtSiSo.Location = new System.Drawing.Point(535, 25);
+            this.txtSiSo.Location = new System.Drawing.Point(687, 25);
             this.txtSiSo.Name = "txtSiSo";
-            this.txtSiSo.Size = new System.Drawing.Size(208, 22);
+            this.txtSiSo.Size = new System.Drawing.Size(73, 22);
             this.txtSiSo.TabIndex = 2;
             // 
             // dataGridView1
@@ -134,11 +137,29 @@
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
+            // txtSiSo1
+            // 
+            this.txtSiSo1.Location = new System.Drawing.Point(528, 28);
+            this.txtSiSo1.Name = "txtSiSo1";
+            this.txtSiSo1.Size = new System.Drawing.Size(73, 22);
+            this.txtSiSo1.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(625, 28);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(30, 16);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "đến";
+            // 
             // TimKiemLopHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1017, 379);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtSiSo1);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.btnTimKiem);
@@ -151,6 +172,7 @@
             this.Controls.Add(this.label1);
             this.Name = "TimKiemLopHoc";
             this.Text = "Tìm kiếm lớp học";
+            this.Load += new System.EventHandler(this.TimKiemLopHoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -169,5 +191,7 @@
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.TextBox txtSiSo1;
+        private System.Windows.Forms.Label label4;
     }
 }

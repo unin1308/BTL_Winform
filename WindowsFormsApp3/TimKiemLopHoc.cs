@@ -66,7 +66,7 @@ namespace WindowsFormsApp3
 
                 if (siSo > 0)
                 {
-                    sql += $" AND SiSo <= {siSo}";
+                    sql += $" AND SiSo = {siSo}";
                 }
 
                 // Thực hiện tìm kiếm và cập nhật DataGridView với kết quả tìm kiếm
